@@ -37,6 +37,7 @@ struct ToolSheetView: View {
         case .draw: DrawSheetView(viewModel: viewModel)
         case .erase: EraseSheetView(viewModel: viewModel)
         case .more: MoreSheetView(viewModel: viewModel)
+        case .ai: AIUnavailableView(viewModel: viewModel)
         }
     }
 

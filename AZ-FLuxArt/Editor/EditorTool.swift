@@ -8,6 +8,7 @@ enum EditorTool: String, CaseIterable, Identifiable {
     case stickers
     case draw
     case erase
+    case ai
     case more
 
     var id: String { rawValue }
@@ -22,6 +23,7 @@ enum EditorTool: String, CaseIterable, Identifiable {
         case .draw: return "Dibujar"
         case .erase: return "Borrador"
         case .more: return "Más"
+        case .ai: return "IA"
         }
     }
 
@@ -35,6 +37,7 @@ enum EditorTool: String, CaseIterable, Identifiable {
         case .draw: return "pencil.tip"
         case .erase: return "eraser"
         case .more: return "ellipsis"
+        case .ai: return "sparkles.rectangle.stack"
         }
     }
 }

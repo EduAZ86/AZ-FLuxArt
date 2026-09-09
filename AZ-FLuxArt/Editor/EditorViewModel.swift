@@ -28,6 +28,10 @@ final class EditorViewModel: NSObject, ObservableObject, NSCoding {
     @Published var showLayersPanel = false
     @Published var editorTitle = "Nuevo proyecto"
 
+    // IA
+    @Published var aiModelInstalled = false
+    @Published var isDownloadingAIModel = false
+
     // Dibujo / borrador (trazo en curso, aún no rasterizado)
     @Published var strokes: [Stroke] = []
     @Published var currentStrokePoints: [CGPoint] = []
@@ -328,6 +332,22 @@ final class EditorViewModel: NSObject, ObservableObject, NSCoding {
 
     func dismissTool() {
         activeTool = nil
+    }
+
+    // MARK: - IA
+
+    /// Descarga e instala el modelo local de IA. Por ahora es un stub de UI:
+    /// aquí se conectará la descarga real del modelo cuando esté disponible.
+    func downloadAIModel() {
+        guard !aiModelInstalled, !isDownloadingAIModel else { return }
+        isDownloadingAIModel = true
+        Task { @MainActor in
+            do {
+                try await Task.sleep(nanoseconds: 2_000_000_000)
+                aiModelInstalled = true
+            } catch {}
+            isDownloadingAIModel = false
+        }
     }
 
     // MARK: - Recorte

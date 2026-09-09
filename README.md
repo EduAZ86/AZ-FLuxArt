@@ -2,6 +2,8 @@
 
 **Editor de imágenes nativo para macOS** escrito en Swift, con edición asistida por IA que corre **100 % en local**.
 
+> Desarrollado por **Eduardo Ayaviri**, desarrollador Front-End y Mobile.
+
 La característica distintiva del proyecto es el uso de un modelo de generación de imágenes ejecutado **en tu propia Mac**: **FLUX.2 Klein 4B (8-bit "S")**, corriendo sobre **MLX** y **Metal** para aprovechar al máximo el rendimiento de los chips de Apple.
 
 ## Características
@@ -31,7 +33,7 @@ O abrí `AZ-FLuxArt.xcodeproj` en Xcode y pulsá *Run*.
 
 ## Estado del proyecto
 
-En desarrollo activo (v0.1.0). La interfaz de edición clásica está operativa y se está integrando la pila de IA local: la UI de la herramienta IA (descarga del modelo) ya está en marcha, conectada al flujo de instalación de FLUX.2 Klein 4B 8-bit a través de MLX/Metal.
+**Pre-alpha** (v0.1.0) · en desarrollo activo. La interfaz de edición clásica está operativa y se está integrando la pila de IA local: la UI de la herramienta IA (descarga del modelo) ya está en marcha, conectada al flujo de instalación de FLUX.2 Klein 4B 8-bit a través de MLX/Metal.
 
 ## Stack
 
@@ -44,4 +46,4 @@ En desarrollo activo (v0.1.0). La interfaz de edición clásica está operativa 
 
 ## Licencia
 
-Sin definir aún.
+Sin definir aún. Este proyecto tiene previsto su **explotación comercial**. Por el momento el repositorio es **público**, pero está planeado que pase a **privado** antes de su lanzamiento.

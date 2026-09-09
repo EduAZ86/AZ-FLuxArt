@@ -338,6 +338,28 @@ struct MoreSheetView: View {
     }
 }
 
+// MARK: - IA
+
+struct AIUnavailableView: View {
+    @ObservedObject var viewModel: EditorViewModel
+
+    var body: some View {
+        HStack(spacing: 12) {
+            Image(systemName: "sparkles")
+                .font(.title2)
+                .foregroundStyle(.secondary)
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Edición con IA")
+                    .font(.subheadline)
+                Text("Descargá el modelo desde el menú de IA para habilitar las herramientas inteligentes.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .padding(16)
+    }
+}
+
 // MARK: - Biblioteca de Stickers
 
 struct StickerLibraryView: View {
